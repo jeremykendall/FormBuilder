@@ -17,7 +17,7 @@ class FormFieldTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new FormField;
+        $this->object = new FormField('text', 'phpunit', 'phpunit');
     }
 
     /**
