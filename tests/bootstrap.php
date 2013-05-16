@@ -5,11 +5,7 @@
 
 $file_root = realpath(dirname(__FILE__) . '/../');
 
-// Autoload classes
-function __autoload($class_name) {
-    include $file_root . '/' . $class_name . '.php';
-}
-
+// Load the class files
 require_once $file_root . '/FieldOption.php';
 require_once $file_root . '/Fieldset.php';
 require_once $file_root . '/FieldsetGroup.php';
