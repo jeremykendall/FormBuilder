@@ -10,7 +10,7 @@ class FormBuilder {
 	private $name;
 	private $fieldsets = array();
 
-	public function __construct($id, $name) {
+	public function __construct($id=null, $name=null) {
 		$this->id = $id;
 		$this->name = $name;
 		if ( $id == null ) {

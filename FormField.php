@@ -16,7 +16,7 @@ class FormField {
 	private $required = false;
 	private $options = array();
 
-	public function __construct($type, $name, $id) {
+	public function __construct($type=null, $name=null, $id=null) {
 		$this->type = $type;
 		$this->name = $name;
 		$this->id = $id;

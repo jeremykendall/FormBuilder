@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit backupGlobals="false"
+		 backupStaticAttributes="false"
+		 bootstrap="tests/bootstrap.php"
+		 syntaxCheck="true"
+		 colors="true">
+
+	<testsuites>
+		<testsuite name="FormBuilder_Tests">
+			<directory suffix="Test.php">tests/FormBuilder</directory>
+		</testsuite>
+	</testsuites>
+	
+	<php>
+	  <const name="RAVEN_API_KEY" value="123456789"/>
+	  <const name="USE_MOCK_TRANSPORT" value="true"/>
+	</php>
+
+</phpunit>
