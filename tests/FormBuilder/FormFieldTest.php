@@ -17,7 +17,7 @@ class FormFieldTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new FormField('text', 'phpunit', 'phpunit');
+        $this->object = new FormField('text', 'field_name', 'field_id');
     }
 
     /**
@@ -30,74 +30,62 @@ class FormFieldTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers FormBuilder\FormField::getName
-     * @todo   Implement testGetName().
      */
     public function testGetName()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEquals('field_name', $this->object->getName(), 'Field names must match.');
     }
 
     /**
      * @covers FormBuilder\FormField::getID
-     * @todo   Implement testGetID().
      */
     public function testGetID()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEquals('field_id', $this->object->getID(), 'Field ids must match.');
     }
 
     /**
      * @covers FormBuilder\FormField::setLabel
-     * @todo   Implement testSetLabel().
      */
     public function testSetLabel()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEmpty($this->object->getLabel(), 'Label must be empty prior to setting.');
+        $this->object->setLabel('test label');
+        $this->assertEquals('test label', $this->object->getLabel(), 'Field labels must match.');
+        $this->assertEmpty($this->object->getDescription(), 'Description must remain empty when description updated.');
     }
 
     /**
      * @covers FormBuilder\FormField::getLabel
-     * @todo   Implement testGetLabel().
      */
     public function testGetLabel()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEmpty($this->object->getLabel(), 'Label must be empty prior to setting.');
+        $this->object->setLabel('label test');
+        $this->assertEquals('label test', $this->object->getLabel(), 'Field labels must match.');
+        $this->assertEmpty($this->object->getDescription(), 'Description must remain empty when description updated.');
     }
 
     /**
      * @covers FormBuilder\FormField::setDescription
-     * @todo   Implement testSetDescription().
      */
     public function testSetDescription()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEmpty($this->object->getDescription(), 'Description must be empty prior to setting.');
+        $this->object->setDescription('test description');
+        $this->assertEquals('test description', $this->object->getDescription(), 'Field descriptions must match.');
+        $this->assertEmpty($this->object->getLabel(), 'Label must remain empty when description updated.');
     }
 
     /**
      * @covers FormBuilder\FormField::getDescription
-     * @todo   Implement testGetDescription().
      */
     public function testGetDescription()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEmpty($this->object->getDescription(), 'Description must be empty prior to setting.');
+        $this->object->setDescription('description test');
+        $this->assertEquals('description test', $this->object->getDescription(), 'Field descriptions must match.');
+        $this->assertEmpty($this->object->getLabel(), 'Label must remain empty when description updated.');
     }
 
     /**

@@ -10,6 +10,7 @@ require_once $file_root . '/FieldOption.php';
 require_once $file_root . '/Fieldset.php';
 require_once $file_root . '/FieldsetGroup.php';
 require_once $file_root . '/FormBuilder.php';
+require_once $file_root . '/FormButton.php';
 require_once $file_root . '/FormField.php';
 
 use \FormBuilder;

@@ -1,5 +1,5 @@
 .DS_Store
 phpunit.xml
-vendor
-docs
-composer.lock
+vendor/
+docs/
+build/
