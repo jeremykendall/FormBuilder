@@ -30,49 +30,41 @@ class FieldOptionTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers FormBuilder\FieldOption::setLabel
-     * @todo   Implement testSetLabel().
      */
     public function testSetLabel()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->setLabel('My Label');
+        $this->assertEquals('My Label', $this->object->GetLabel(), 'Labels match.');
+        $this->assertEmpty($this->object->GetValue(), 'Setting the label does not change the value.');
     }
 
     /**
      * @covers FormBuilder\FieldOption::getLabel
-     * @todo   Implement testGetLabel().
      */
     public function testGetLabel()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->setLabel('Another Label');
+        $this->assertEquals('Another Label', $this->object->GetLabel(), 'Labels match.');
+        $this->assertNull($this->object->GetValue(), 'Getting the label does not change the value.');
     }
 
     /**
      * @covers FormBuilder\FieldOption::setValue
-     * @todo   Implement testSetValue().
      */
     public function testSetValue()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->SetValue('A Value');
+        $this->assertEquals('A Value', $this->object->GetValue(), 'Values match');
+        $this->assertEmpty($this->object->GetLabel(), 'Setting the value does not change the label');
     }
 
     /**
      * @covers FormBuilder\FieldOption::getValue
-     * @todo   Implement testGetValue().
      */
     public function testGetValue()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->SetValue('A Value');
+        $this->assertEquals('A Value', $this->object->GetValue(), 'Values match');
+        $this->assertEmpty($this->object->GetLabel(), 'Getting the value does not change the label');
     }
 }

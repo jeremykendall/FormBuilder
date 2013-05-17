@@ -29,26 +29,26 @@ class FieldsetGroup {
 	}
 
 	public function createText($name, $id = null) {
-		return $this->createField('text', $name, $id = null);
+		return $this->createField('text', $name, $id);
 	}
 
 	public function createSelect($name, $id = null) {
-		return $this->createField('select', $name, $id = null);
+		return $this->createField('select', $name, $id);
 	}
 
 	public function createRadio($name, $id = null) {
-		return $this->createField('radio', $name, $id = null);
+		return $this->createField('radio', $name, $id);
 	}
 
 	public function createCheckbox($name, $id = null) {
-		return $this->createField('checkbox', $name, $id = null);
+		return $this->createField('checkbox', $name, $id);
 	}
 
 	public function createTextarea($name, $id = null) {
-		return $this->createField('textarea', $name, $id = null);
+		return $this->createField('textarea', $name, $id);
 	}
 
-	public function createField($type, $name, $id = null) {
+	public function createField($type, $name, $id) {
 		if ( $id == null ) {
 			$id = $name;
 		}

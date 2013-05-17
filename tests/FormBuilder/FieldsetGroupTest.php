@@ -34,10 +34,9 @@ class FieldsetGroupTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetColumns()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->SetColumns(2);
+        $this->assertEquals(2, $this->object->GetColumns(), 'Column count matches.');
+        $this->assertEmpty($this->object->GetFields(), 'Changing the column count does not affect fields.');
     }
 
     /**
@@ -46,10 +45,9 @@ class FieldsetGroupTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetColumns()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->SetColumns(2);
+        $this->assertEquals(2, $this->object->GetColumns(), 'Column count matches.');
+        $this->assertEmpty($this->object->GetFields(), 'Changing the column count does not affect fields.');
     }
 
     /**
@@ -58,10 +56,9 @@ class FieldsetGroupTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetFields()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->CreateText('test_field');
+        $this->assertNotEmpty($this->object->GetFields(), 'Fields are set.');
+        $this->assertEquals(1, count($this->object->GetFields()), 'Field count matches.');
     }
 
     /**
@@ -70,10 +67,12 @@ class FieldsetGroupTest extends \PHPUnit_Framework_TestCase
      */
     public function testCreateText()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->CreateText('test_name', 'test_id');
+        $fields = $this->object->GetFields();
+        $this->assertNotEmpty($fields, 'Fields are set.');
+        $this->assertEquals('text', $fields[0]->GetType(), 'Field types match.');
+        $this->assertEquals('test_name', $fields[0]->GetName(), 'Field names match.');
+        $this->assertEquals('test_id', $fields[0]->GetId(), 'Field ids match.');
     }
 
     /**
