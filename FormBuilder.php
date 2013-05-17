@@ -8,7 +8,9 @@ class FormBuilder {
 
 	private $id;
 	private $name;
+	private $label;
 	private $fieldsets = array();
+	private $buttons = array();
 
 	public function __construct($id=null, $name=null) {
 		$this->id = $id;
@@ -31,7 +33,9 @@ class FormBuilder {
 		$data = array(
 			'id' => $this->id,
 			'name' => $this->name,
-			'fieldsets' => array()
+			'label' => $this->getLabel(),
+			'fieldsets' => array(),
+			'buttons' => array()
 		);
 		foreach ( $this->fieldsets as $fieldset ) {
 			$fs = array();
@@ -49,7 +53,11 @@ class FormBuilder {
 					$f['type'] = $field->getType();
 					$f['name'] = $field->getName();
 					$f['id'] = $field->getID();
+					$f['label'] = $field->getLabel();
 					$f['required'] = $field->getRequired();
+					$f['placeholder'] = $field->getPlaceholder();
+					$f['validation'] = $field->getValidation();
+					$f['data'] = $field->getData();
 					$f['value'] = $field->getValue();
 
 					switch ( $field->getType() ) {
@@ -68,10 +76,33 @@ class FormBuilder {
 				}
 				$fs['groups'][] = $g;
 			}
-
 			$data['fieldsets'][] = $fs;
 		}
+
+		foreach ( $this->buttons as $button ) {
+			$button = array(
+				'label' => $button->getLabel(),
+				'id' => $button->getID(),
+				'type' => $button->getType()
+			);
+			$data['buttons'][] = $button;
+		}
+
 		return $data;
+	}
+
+	public function setLabel($label) {
+		$this->label = $label;
+	}
+
+	public function getLabel() {
+		return (string) $this->label;
+	}
+
+	public function createButton($label, $id) {
+		$button = new FormButton($label, $id);
+		$this->buttons[] = $button;
+		return $button;
 	}
 
 }

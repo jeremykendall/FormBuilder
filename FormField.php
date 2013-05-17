@@ -13,7 +13,10 @@ class FormField {
 	private $label;
 	private $value;
 	private $description;
+	private $placeholder;
 	private $required = false;
+	private $validation;
+	private $data = array();
 	private $options = array();
 
 	public function __construct($type=null, $name=null, $id=null) {
@@ -58,6 +61,14 @@ class FormField {
 		return (string) $this->description;
 	}
 
+	public function setPlaceholder($placeholder) {
+		$this->placeholder = $placeholder;
+	}
+
+	public function getPlaceholder() {
+		return (string) $this->placeholder;
+	}
+
 	public function setValue($value) {
 		$this->value = $value;
 	}
@@ -86,6 +97,22 @@ class FormField {
 
 	public function getRequired() {
 		return (bool) $this->required;
+	}
+
+	public function setValidation($validation) {
+		$this->validation = $validation;
+	}
+
+	public function getValidation() {
+		return $this->validation;
+	}
+
+	public function setData(array $data = null) {
+		$this->data = (array) $data;
+	}
+
+	public function getData() {
+		return $this->data;
 	}
 
 }

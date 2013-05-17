@@ -28,27 +28,30 @@ class FieldsetGroup {
 		return $this->fields;
 	}
 
-	public function createText($name, $id) {
-		return $this->createField('text', $name, $id);
+	public function createText($name, $id = null) {
+		return $this->createField('text', $name, $id = null);
 	}
 
-	public function createSelect($name, $id) {
-		return $this->createField('select', $name, $id);
+	public function createSelect($name, $id = null) {
+		return $this->createField('select', $name, $id = null);
 	}
 
-	public function createRadio($name, $id) {
-		return $this->createField('radio', $name, $id);
+	public function createRadio($name, $id = null) {
+		return $this->createField('radio', $name, $id = null);
 	}
 
-	public function createCheckbox($name, $id) {
-		return $this->createField('checkbox', $name, $id);
+	public function createCheckbox($name, $id = null) {
+		return $this->createField('checkbox', $name, $id = null);
 	}
 
-	public function createTextarea($name, $id) {
-		return $this->createField('textarea', $name, $id);
+	public function createTextarea($name, $id = null) {
+		return $this->createField('textarea', $name, $id = null);
 	}
 
-	private function createField($type, $name, $id) {
+	public function createField($type, $name, $id = null) {
+		if ( $id == null ) {
+			$id = $name;
+		}
 		$field = new FormField($type, $name, $id);
 		$this->fields[] = $field;
 		return $field;
