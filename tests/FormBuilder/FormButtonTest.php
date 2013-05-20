@@ -26,6 +26,15 @@ class FormButtonTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
+	 * @covers FormBuilder\FormButton::__construct
+	 */
+	public function testConstrutor() {
+		$this->object->__construct('label', 'id');
+		$this->assertEquals('label', $this->object->getLabel(), 'Labels are equal.');
+		$this->assertEquals('id', $this->object->getId(), 'Ids are equal.');
+	}
+
+	/**
 	 * @covers FormBuilder\FormButton::getLabel
 	 */
 	public function testGetLabel()

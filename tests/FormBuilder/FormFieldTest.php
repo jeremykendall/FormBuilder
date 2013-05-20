@@ -29,10 +29,49 @@ class FormFieldTest extends \PHPUnit_Framework_TestCase
 	 * @covers FormBuilder\FormField::__construct
 	 */
 	public function testConstrutor() {
-		$this->object = new FormField('radio', 'name', 'id');
+		$this->object->__construct('radio', 'name', 'id');
 		$this->assertEquals('radio', $this->object->getType(), 'Types are equal.');
 		$this->assertEquals('name', $this->object->getName(), 'Names are equal.');
 		$this->assertEquals('id', $this->object->getId(), 'Ids are equal.');
+	}
+
+	/**
+	 * @covers FormBuilder\FormField::__construct
+	 * @expectedException Exception
+	 * @expectedExceptionMessage Invalid type specified. Supported values: text, select, textarea, radio, checkbox, file
+	 */
+	public function testInvalidType() {
+		$this->object = new FormField('foobar', 'field_name', 'field_id');
+	}
+
+	/**
+	 * @covers FormBuilder\FormField::__construct
+	 * @expectedException Exception
+	 * @expectedExceptionMessage $type is required.
+	 */
+	public function testMissingType() {
+		$this->object = new FormField(null, 'name', 'id');
+		$this->assertFail('Exception was not thrown.');
+	}
+
+	/**
+	 * @covers FormBuilder\FormField::__construct
+	 * @expectedException Exception
+	 * @expectedExceptionMessage $name is required.
+	 */
+	public function testInvalidName() {
+		$this->object = new FormField('radio', null, 'id');
+		$this->assertFail('Exception was not thrown.');
+	}
+
+	/**
+	 * @covers FormBuilder\FormField::__construct
+	 * @expectedException Exception
+	 * @expectedExceptionMessage $id is required.
+	 */
+	public function testInvalidId() {
+		$this->object = new FormField('radio', 'name', null);
+		$this->assertFail('Exception was not thrown.');
 	}
 
 	/**
@@ -50,7 +89,6 @@ class FormFieldTest extends \PHPUnit_Framework_TestCase
 	public function testGetID()
 	{
 		$this->assertEquals('field_id', $this->object->getId(), 'Ids are equal.');
-
 	}
 
 	/**

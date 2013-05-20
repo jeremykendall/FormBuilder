@@ -9,9 +9,6 @@ class FieldsetGroup {
 	private $cols = 1;
 	private $fields = array();
 
-	public function __construct() {
-	}
-
 	public function setColumns($cols) {
 		$cols = (int) $cols;
 		if ( $cols === 0 ) {
@@ -48,7 +45,7 @@ class FieldsetGroup {
 		return $this->createField('textarea', $name, $id);
 	}
 
-	public function createField($type, $name, $id) {
+	public function createField($type, $name, $id = null) {
 		if ( $id == null ) {
 			$id = $name;
 		}

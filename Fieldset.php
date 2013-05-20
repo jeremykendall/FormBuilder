@@ -10,9 +10,6 @@ class Fieldset {
 	private $label;
 	private $description;
 
-	public function __construct() {
-	}
-
 	public function setLabel($label) {
 		$this->label = $label;
 	}

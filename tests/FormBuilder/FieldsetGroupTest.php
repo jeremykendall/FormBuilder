@@ -33,6 +33,8 @@ class FieldsetGroupTest extends \PHPUnit_Framework_TestCase
 		$this->object->setColumns(2);
 		$this->assertEquals(2, $this->object->getColumns(), 'Column count matches.');
 		$this->assertEmpty($this->object->getFields(), 'Changing the column count does not affect fields.');
+		$this->object->setColumns(0);
+		$this->assertEquals(1, $this->object->getColumns(), 'Column count matches.');
 	}
 
 	/**
@@ -131,6 +133,10 @@ class FieldsetGroupTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals('file', $fields[0]->getType(), 'Field types match.');
 		$this->assertEquals('test_name', $fields[0]->getName(), 'Field names match.');
 		$this->assertEquals('test_id', $fields[0]->getId(), 'Field ids match.');
+		$this->object->createField('file', 'test_name2');
+		$fields = $this->object->getFields();
+		$this->assertEquals('test_name2', $fields[1]->getId(), 'Field id defaults to name if null.');
+
 	}
 
 }

@@ -26,6 +26,36 @@ class FormBuilderTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
+	 * @covers FormBuilder\FormBuilder::__construct
+	 */
+	public function testConstrutor() {
+		$this->object->__construct('test_id', 'test_name');
+		$form = $this->object->export();
+		$this->assertEquals('test_id', $form['id'], 'Ids are equal.');
+		$this->assertEquals('test_name', $form['name'], 'Names are equal.');
+	}
+
+	/**
+	 * @covers FormBuilder\FormBuilder::__construct
+	 * @expectedException Exception
+	 * @expectedExceptionMessage $id is required.
+	 */
+	public function testInvalidName() {
+		$this->object = new FormBuilder(null, 'name');
+		$this->fail('Exception was not thrown.');
+	}
+
+	/**
+	 * @covers FormBuilder\FormBuilder::__construct
+	 * @expectedException Exception
+	 * @expectedExceptionMessage $name is required.
+	 */
+	public function testInvalidId() {
+		$this->object = new FormBuilder('id', null);
+		$this->fail('Exception was not thrown.');
+	}
+
+	/**
 	 * @covers FormBuilder\FormBuilder::createFieldset
 	 */
 	public function testCreateFieldset()
@@ -42,7 +72,11 @@ class FormBuilderTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testExport()
 	{
-		$this->object->createFieldset();
+		$fieldset = $this->object->createFieldset();
+		$fieldset->createGroup()->createText('test_field');
+		$select = $fieldset->createGroup()->createSelect('test_field');
+		$select->createOption('test', 'value');
+		$this->object->createButton('submit', 'a button');
 		$form = $this->object->export();
 		$this->assertEquals('form_name', $form['name'], 'Name is set.');
 		$this->assertEquals('form_id', $form['id'], 'Id is set.');

@@ -26,6 +26,15 @@ class FieldOptionTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
+	 * @covers FormBuilder\FieldOption::__construct
+	 */
+	public function testConstrutor() {
+		$this->object->__construct('test_label', 'test_value');
+		$this->assertEquals('test_label', $this->object->getLabel(), 'Labels are equal.');
+		$this->assertEquals('test_value', $this->object->getValue(), 'Values are equal.');
+	}
+
+	/**
 	 * @covers FormBuilder\FieldOption::setLabel
 	 */
 	public function testSetLabel()
