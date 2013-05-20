@@ -26,6 +26,16 @@ class FormFieldTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers FormBuilder\FormField::__construct
+     */
+    public function testConstrutor() {
+        $this->object = new FormField('radio', 'name', 'id');
+        $this->assertEquals('radio', $this->object->getType(), 'Types are equal.');
+        $this->assertEquals('name', $this->object->getName(), 'Names are equal.');
+        $this->assertEquals('id', $this->object->getId(), 'Ids are equal.');
+    }
+
+    /**
      * @covers FormBuilder\FormField::getName
      */
     public function testGetName()
@@ -65,181 +75,153 @@ class FormFieldTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers FormBuilder\FormField::setDescription
-     * @todo   Implement testSetDescription().
      */
     public function testSetDescription()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEmpty($this->object->getDescription(), 'Description is empty prior to being set.');
+        $this->object->setDescription('test description');
+        $this->assertEquals('test description', $this->object->getDescription(), 'Descriptions are equal.');
     }
 
     /**
      * @covers FormBuilder\FormField::getDescription
-     * @todo   Implement testGetDescription().
      */
     public function testGetDescription()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEmpty($this->object->getDescription(), 'Description is empty prior to being set.');
+        $this->object->setDescription('description test');
+        $this->assertEquals('description test', $this->object->getDescription(), 'Descriptions are equal.');
     }
 
     /**
      * @covers FormBuilder\FormField::setPlaceholder
-     * @todo   Implement testSetPlaceholder().
      */
     public function testSetPlaceholder()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEmpty($this->object->getPlaceholder(), 'Placeholder is empty prior to being set.');
+        $this->object->setPlaceholder('placeholder test');
+        $this->assertEquals('placeholder test', $this->object->getPlaceholder(), 'Placeholders are equal.');
     }
 
     /**
      * @covers FormBuilder\FormField::getPlaceholder
-     * @todo   Implement testGetPlaceholder().
      */
     public function testGetPlaceholder()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEmpty($this->object->getPlaceholder(), 'Placeholder is empty prior to being set.');
+        $this->object->setPlaceholder('test placeholder');
+        $this->assertEquals('test placeholder', $this->object->getPlaceholder(), 'Placeholders are equal.');
     }
 
     /**
      * @covers FormBuilder\FormField::setValue
-     * @todo   Implement testSetValue().
      */
     public function testSetValue()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEmpty($this->object->getValue(), 'Value is empty prior to being set.');
+        $this->object->setValue('value test');
+        $this->assertEquals('value test', $this->object->getValue(), 'Values are equal.');
     }
 
     /**
      * @covers FormBuilder\FormField::getValue
-     * @todo   Implement testGetValue().
      */
     public function testGetValue()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEmpty($this->object->getValue(), 'Value is empty prior to being set.');
+        $this->object->setValue('test value');
+        $this->assertEquals('test value', $this->object->getValue(), 'Values are equal.');
     }
 
     /**
      * @covers FormBuilder\FormField::getType
-     * @todo   Implement testGetType().
      */
     public function testGetType()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEquals('text', $this->object->getType(), 'Types must match.');
     }
 
     /**
      * @covers FormBuilder\FormField::createOption
-     * @todo   Implement testCreateOption().
      */
     public function testCreateOption()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->createOption('test option', 'test_value');
+        $options = $this->object->getOptions();
+        $this->assertEquals(1, count($options), 'One option has been created.');
+        $this->assertEquals('test option', $options[0]->getLabel(), 'Option labels must match.');
+        $this->assertEquals('test_value', $options[0]->getValue(), 'Option values must match.');
     }
 
     /**
      * @covers FormBuilder\FormField::getOptions
-     * @todo   Implement testGetOptions().
      */
     public function testGetOptions()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->createOption('test option', 'test_value');
+        $this->object->createOption('another option', 'test_value2');
+        $options = $this->object->getOptions();
+        $this->assertEquals(2, count($options), 'One option has been created.');
+        $this->assertEquals('test option', $options[0]->getLabel(), 'Option labels must match.');
+        $this->assertEquals('test_value2', $options[1]->getValue(), 'Option values must match.');
     }
 
     /**
      * @covers FormBuilder\FormField::setRequired
-     * @todo   Implement testSetRequired().
      */
     public function testSetRequired()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->setRequired(true);
+        $this->assertTrue($this->object->getRequired(), 'Field is required.');
     }
 
     /**
      * @covers FormBuilder\FormField::getRequired
-     * @todo   Implement testGetRequired().
      */
     public function testGetRequired()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->setRequired(false);
+        $this->assertFalse($this->object->getRequired(), 'Field is not required.');
     }
 
     /**
      * @covers FormBuilder\FormField::setValidation
-     * @todo   Implement testSetValidation().
      */
     public function testSetValidation()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->setValidation('validation_library_input');
+        $this->assertEquals('validation_library_input', $this->object->getValidation(), 'Validation rules must match.');
     }
 
     /**
      * @covers FormBuilder\FormField::getValidation
-     * @todo   Implement testGetValidation().
      */
     public function testGetValidation()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->setValidation('input_validation_library');
+        $this->assertEquals('input_validation_library', $this->object->getValidation(), 'Validation rules must match.');
     }
 
     /**
      * @covers FormBuilder\FormField::setData
-     * @todo   Implement testSetData().
      */
     public function testSetData()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->object->setData(array('class'=>'span3'));
+        $data = $this->object->getData();
+        $this->assertInternalType('array', $data, 'Returned as an array.');
+        $this->assertEquals('span3', $data['class'], 'Data values must match.');
     }
 
     /**
      * @covers FormBuilder\FormField::getData
-     * @todo   Implement testGetData().
      */
     public function testGetData()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertEmpty($this->object->getData(), 'No data was previously set.');
+        $this->object->setData(array('class'=>'span3'));
+        $data = $this->object->getData();
+        $this->assertInternalType('array', $data, 'Returned as an array.');
+        $this->assertEquals('span3', $data['class'], 'Data values must match.');
     }
 }
