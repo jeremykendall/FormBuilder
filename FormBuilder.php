@@ -1,17 +1,60 @@
 <?php
+/**
+ * FormBuilder
+ */
 
 namespace FormBuilder;
 
 use Exception;
 
+/**
+ * FormBuilder
+ *
+ * @package FormBuilder
+ */
 class FormBuilder {
 
+	/**
+	 * ID
+	 *
+	 * @var string
+	 */
 	private $id;
+
+	/**
+	 * Name
+	 *
+	 * @var string
+	 */
 	private $name;
+
+	/**
+	 * Label
+	 *
+	 * @var string
+	 */
 	private $label;
+
+	/**
+	 * Fieldsets
+	 *
+	 * @var array
+	 */
 	private $fieldsets = array();
+
+	/**
+	 * Buttons
+	 *
+	 * @var array
+	 */
 	private $buttons = array();
 
+	/**
+	 * Constructor
+	 *
+	 * @param string $id 
+	 * @param string $name 
+	 */
 	public function __construct($id=null, $name=null) {
 		$this->id = $id;
 		$this->name = $name;
@@ -23,12 +66,20 @@ class FormBuilder {
 		}
 	}
 
+	/**
+	 * Create Fieldset
+	 */
 	public function createFieldset() {
 		$fs = new Fieldset();
 		$this->fieldsets[] = $fs;
 		return $fs;
 	}
 
+	/**
+	 * Export
+	 *
+	 * @return array
+	 */
 	public function export() {
 		$data = array(
 			'id' => $this->id,
@@ -91,14 +142,30 @@ class FormBuilder {
 		return $data;
 	}
 
+	/**
+	 * Set Label
+	 *
+	 * @param string $label 
+	 */
 	public function setLabel($label) {
 		$this->label = $label;
 	}
 
+	/**
+	 * Get Label
+	 *
+	 * @return string
+	 */
 	public function getLabel() {
 		return (string) $this->label;
 	}
 
+	/**
+	 * Create Button
+	 *
+	 * @param string $label 
+	 * @param string $id 
+	 */
 	public function createButton($label, $id) {
 		$button = new FormButton($label, $id);
 		$this->buttons[] = $button;
