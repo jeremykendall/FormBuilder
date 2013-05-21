@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/stephenyeargin/FormBuilder.png?branch=master)](https://travis-ci.org/stephenyeargin/FormBuilder)
+
 FormBuilder
 ===========
 
