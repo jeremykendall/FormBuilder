@@ -1,6 +1,10 @@
 <?php
 /**
  * FormBuilder
+ *
+ * A family of PHP classes that enable you to easily define the various
+ * elements that make up a complex HTML form, which can then be
+ * exported to JSON for client-side rendering.
  */
 
 namespace FormBuilder;
@@ -10,6 +14,9 @@ use Exception;
 /**
  * FormBuilder
  *
+ * FormBuilder is the parent class of the FormBuilder package.
+ *
+ * @link https://github.com/tkambler/FormBuilder FormBuilder on GitHub
  * @package FormBuilder
  */
 class FormBuilder {
@@ -17,43 +24,44 @@ class FormBuilder {
 	/**
 	 * ID
 	 *
-	 * @var string
+	 * @var string ID of the form.
 	 */
 	private $id;
 
 	/**
 	 * Name
 	 *
-	 * @var string
+	 * @var string Name of the form.
 	 */
 	private $name;
 
 	/**
 	 * Label
 	 *
-	 * @var string
+	 * @var string Label of the form.
 	 */
 	private $label;
 
 	/**
 	 * Fieldsets
 	 *
-	 * @var array
+	 * @var array Ordered array of Fieldset instances.
 	 */
 	private $fieldsets = array();
 
 	/**
 	 * Buttons
 	 *
-	 * @var array
+	 * @var array Ordered array of FormButton instances.
 	 */
 	private $buttons = array();
 
 	/**
 	 * Constructor
 	 *
-	 * @param string $id 
-	 * @param string $name 
+	 * @param string $id ID of the form.
+	 * @param string $name Name of the form.
+	 * @throws Exception
 	 */
 	public function __construct($id=null, $name=null) {
 		$this->id = $id;
@@ -68,6 +76,8 @@ class FormBuilder {
 
 	/**
 	 * Create Fieldset
+	 *
+	 * @return object Fieldset instance.
 	 */
 	public function createFieldset() {
 		$fs = new Fieldset();
@@ -78,7 +88,7 @@ class FormBuilder {
 	/**
 	 * Export
 	 *
-	 * @return array
+	 * @return array Associative array of the form.
 	 */
 	public function export() {
 		$data = array(
@@ -145,7 +155,7 @@ class FormBuilder {
 	/**
 	 * Set Label
 	 *
-	 * @param string $label 
+	 * @param string $label Label of the form.
 	 */
 	public function setLabel($label) {
 		$this->label = $label;
@@ -154,7 +164,7 @@ class FormBuilder {
 	/**
 	 * Get Label
 	 *
-	 * @return string
+	 * @return string Label of the form.
 	 */
 	public function getLabel() {
 		return (string) $this->label;
@@ -163,8 +173,8 @@ class FormBuilder {
 	/**
 	 * Create Button
 	 *
-	 * @param string $label 
-	 * @param string $id 
+	 * @param string $label Label of the button.
+	 * @param string $id ID of the button.
 	 */
 	public function createButton($label, $id) {
 		$button = new FormButton($label, $id);

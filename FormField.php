@@ -1,6 +1,10 @@
 <?php
 /**
- * Form Field
+ * FormBuilder
+ *
+ * A family of PHP classes that enable you to easily define the various
+ * elements that make up a complex HTML form, which can then be
+ * exported to JSON for client-side rendering.
  */
 
 namespace FormBuilder;
@@ -10,6 +14,9 @@ use Exception;
 /**
  * Form Field
  *
+ * A FormField is a component for a Fieldset instance.
+ *
+ * @link https://github.com/tkambler/FormBuilder FormBuilder on GitHub
  * @package FormBuilder
  */
 class FormField {
@@ -17,93 +24,94 @@ class FormField {
 	/**
 	 * Valid Types
 	 *
-	 * @var array
+	 * @var array List of valid types.
 	 */
 	private $valid_types = array('text', 'select', 'textarea', 'radio', 'checkbox', 'file');
 
 	/**
 	 * Type
 	 *
-	 * @var string
+	 * @var string Type of the form field.
 	 */
 	private $type;
 
 	/**
 	 * ID
 	 *
-	 * @var string
+	 * @var string ID of the form field.
 	 */
 	private $id;
 
 	/**
 	 * Name
 	 *
-	 * @var string
+	 * @var string Name attribute of the form field.
 	 */
 	private $name;
 
 	/**
 	 * Label
 	 *
-	 * @var string
+	 * @var string Label of the form field.
 	 */
 	private $label;
 
 	/**
 	 * Value
 	 *
-	 * @var string
+	 * @var string Value of the form field.
 	 */
 	private $value;
 
 	/**
 	 * Description
 	 *
-	 * @var string
+	 * @var string Description of the form field.
 	 */
 	private $description;
 
 	/**
 	 * Placeholder
 	 *
-	 * @var string
+	 * @var string Placeholder of the form field.
 	 */
 	private $placeholder;
 
 	/**
 	 * Required
 	 *
-	 * @var boolean
+	 * @var boolean Whether form field is required.
 	 */
 	private $required = false;
 
 	/**
 	 * Validation
 	 *
-	 * @var string
+	 * @var string Validation rule of the form field.
 	 */
 	private $validation;
 
 	/**
 	 * Data
 	 *
-	 * @var array
+	 * @var array Associative array of data of the form field.
 	 */
 	private $data = array();
 
 	/**
 	 * Options
 	 *
-	 * @var array
+	 * @var array Ordered array of options of the form field, typically for `<select>`.
 	 */
 	private $options = array();
 
 	/**
 	 * Constructor
 	 *
-	 * @param string $type 
-	 * @param string $name 
-	 * @param string $id 
+	 * @param string $type Type attribute of the form field.
+	 * @param string $name Name attribute of the form field.
+	 * @param string $id ID of teh form field.
+	 * @throws Exception
 	 */
 	public function __construct($type=null, $name=null, $id=null) {
 		$this->type = $type;
@@ -126,7 +134,7 @@ class FormField {
 	/**
 	 * Get Name
 	 *
-	 * @return string
+	 * @return string Name attribute of the form field.
 	 */
 	public function getName() {
 		return (string) $this->name;
@@ -135,7 +143,7 @@ class FormField {
 	/**
 	 * Get ID
 	 *
-	 * @return string
+	 * @return string ID of the form field.
 	 */
 	public function getID() {
 		return (string) $this->id;
@@ -144,7 +152,7 @@ class FormField {
 	/**
 	 * Set Label
 	 *
-	 * @param string $label 
+	 * @param string $label Label of the form field.
 	 */
 	public function setLabel($label) {
 		$this->label = $label;
@@ -153,7 +161,7 @@ class FormField {
 	/**
 	 * Get Label
 	 *
-	 * @return string
+	 * @return string Label of the form field.
 	 */
 	public function getLabel() {
 		return (string) $this->label;
@@ -162,7 +170,7 @@ class FormField {
 	/**
 	 * Set Description
 	 *
-	 * @param string $desc 
+	 * @param string $desc Description of the form field.
 	 */
 	public function setDescription($desc) {
 		$this->description = $desc;
@@ -171,7 +179,7 @@ class FormField {
 	/**
 	 * Get Description
 	 *
-	 * @return string
+	 * @return string Description of the form field.
 	 */
 	public function getDescription() {
 		return (string) $this->description;
@@ -180,7 +188,7 @@ class FormField {
 	/**
 	 * Set Placeholder
 	 *
-	 * @param string $placeholder 
+	 * @param string $placeholder Placeholder of the form field.
 	 */
 	public function setPlaceholder($placeholder) {
 		$this->placeholder = $placeholder;
@@ -189,7 +197,7 @@ class FormField {
 	/**
 	 * Get Placeholder
 	 *
-	 * @return string
+	 * @return string Placeholder of the form field.
 	 */
 	public function getPlaceholder() {
 		return (string) $this->placeholder;
@@ -198,7 +206,7 @@ class FormField {
 	/**
 	 * Set Value
 	 *
-	 * @param string $value 
+	 * @param string $value Value of the form field.
 	 */
 	public function setValue($value) {
 		$this->value = $value;
@@ -207,7 +215,7 @@ class FormField {
 	/**
 	 * Get Value
 	 *
-	 * @return string
+	 * @return string Value of the form field.
 	 */
 	public function getValue() {
 		return $this->value;
@@ -216,7 +224,7 @@ class FormField {
 	/**
 	 * Get Type
 	 *
-	 * @return string
+	 * @return string Type attribute of the form field.
 	 */
 	public function getType() {
 		return (string) $this->type;
@@ -225,8 +233,9 @@ class FormField {
 	/**
 	 * Create Option
 	 *
-	 * @param string $label 
-	 * @param string $value 
+	 * @param string $label Label of the form field option.
+	 * @param string $value Value of the form field option.
+	 * @return object Instance of FieldOption.
 	 */
 	public function createOption($label = null, $value = null) {
 		$option = new FieldOption($label, $value);
@@ -237,7 +246,7 @@ class FormField {
 	/**
 	 * Get Options
 	 *
-	 * @return array
+	 * @return array Ordered array of FieldOption instances.
 	 */
 	public function getOptions() {
 		return $this->options;
@@ -246,7 +255,7 @@ class FormField {
 	/**
 	 * Set Required
 	 *
-	 * @param boolean $req 
+	 * @param boolean $req Whether field is required.
  	*/
 	public function setRequired($req) {
 		$this->required = (bool) $req;
@@ -255,7 +264,7 @@ class FormField {
 	/**
 	 * Get Required
 	 *
-	 * @return boolean
+	 * @return boolean Whether field is required.
 	 */
 	public function getRequired() {
 		return (bool) $this->required;
@@ -264,7 +273,7 @@ class FormField {
 	/**
 	 * Set Validation
 	 *
-	 * @param string $validation 
+	 * @param string $validation Validation rule of the form field.
 	 */
 	public function setValidation($validation) {
 		$this->validation = $validation;
@@ -273,7 +282,7 @@ class FormField {
 	/**
 	 * Get Validation
 	 *
-	 * @return string
+	 * @return string Validation rule of the form field.
 	 */
 	public function getValidation() {
 		return $this->validation;
@@ -282,7 +291,7 @@ class FormField {
 	/**
 	 * Set Data
 	 *
-	 * @param array $data 
+	 * @param array $data Data of the form field.
 	 */
 	public function setData(array $data = null) {
 		$this->data = (array) $data;
@@ -291,7 +300,7 @@ class FormField {
 	/**
 	 * Get Data
 	 *
-	 * @return array
+	 * @return array Data of the form field.
 	 */
 	public function getData() {
 		return $this->data;

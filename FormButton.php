@@ -1,12 +1,20 @@
 <?php
 /**
- * Form Button
+ * FormBuilder
+ *
+ * A family of PHP classes that enable you to easily define the various
+ * elements that make up a complex HTML form, which can then be
+ * exported to JSON for client-side rendering.
  */
+
 namespace FormBuilder;
 
 /**
  * Form Button
  *
+ * A FormButton is a component for a FormBuilder instance.
+ *
+ * @link https://github.com/tkambler/FormBuilder FormBuilder on GitHub
  * @package FormBuilder
  */
 class FormButton {
@@ -14,29 +22,29 @@ class FormButton {
 	/**
 	 * Label
 	 *
-	 * @var string
+	 * @var string Label of the button.
 	 */
 	private $label;
 
 	/**
 	 * ID
 	 *
-	 * @var string
+	 * @var string ID of the button.
 	 */
 	private $id;
 
 	/**
 	 * Type
 	 *
-	 * @var string
+	 * @var string Type attribute of the button.
 	 */
 	private $type;
 
 	/**
 	 * Constructor
 	 *
-	 * @param string $label 
-	 * @param string $id 
+	 * @param string $label Label of the button.
+	 * @param string $id ID of the button.
 	 */
 	public function __construct($label, $id) {
 		$this->label = $label;
@@ -46,7 +54,7 @@ class FormButton {
 	/**
 	 * Get Label
 	 *
-	 * @return string
+	 * @return string Label of the button.
 	 */
 	public function getLabel() {
 		return (string) $this->label;
@@ -55,7 +63,7 @@ class FormButton {
 	/**
 	 * Get ID
 	 *
-	 * @return string
+	 * @return string ID of the button.
 	 */
 	public function getID() {
 		return (string) $this->id;
@@ -64,7 +72,7 @@ class FormButton {
 	/**
 	 * Set Type
 	 *
-	 * @param string $type 
+	 * @param string $type Type attribute of the button.
 	 */
 	public function setType($type) {
 		$this->type = $type;
@@ -73,7 +81,7 @@ class FormButton {
 	/**
 	 * Get Type
 	 *
-	 * @return string
+	 * @return string Type attribute of the button.
 	 */
 	public function getType() {
 		return $this->type;
