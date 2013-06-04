@@ -1,0 +1,459 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>FormBuilder » \FormBuilder\FormField</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">FormBuilder</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/FormBuilder.html"><i class="icon-folder-open"></i> FormBuilder</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">0</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_createOption" title="createOption :: Create Option"><span class="description">Create Option</span><pre>createOption()</pre></a></li>
+<li class="method public "><a href="#method_getData" title="getData :: Get Data"><span class="description">Get Data</span><pre>getData()</pre></a></li>
+<li class="method public "><a href="#method_getDescription" title="getDescription :: Get Description"><span class="description">Get Description</span><pre>getDescription()</pre></a></li>
+<li class="method public "><a href="#method_getID" title="getID :: Get ID"><span class="description">Get ID</span><pre>getID()</pre></a></li>
+<li class="method public "><a href="#method_getLabel" title="getLabel :: Get Label"><span class="description">Get Label</span><pre>getLabel()</pre></a></li>
+<li class="method public "><a href="#method_getName" title="getName :: Get Name"><span class="description">Get Name</span><pre>getName()</pre></a></li>
+<li class="method public "><a href="#method_getOptions" title="getOptions :: Get Options"><span class="description">Get Options</span><pre>getOptions()</pre></a></li>
+<li class="method public "><a href="#method_getPlaceholder" title="getPlaceholder :: Get Placeholder"><span class="description">Get Placeholder</span><pre>getPlaceholder()</pre></a></li>
+<li class="method public "><a href="#method_getRequired" title="getRequired :: Get Required"><span class="description">Get Required</span><pre>getRequired()</pre></a></li>
+<li class="method public "><a href="#method_getType" title="getType :: Get Type"><span class="description">Get Type</span><pre>getType()</pre></a></li>
+<li class="method public "><a href="#method_getValidation" title="getValidation :: Get Validation"><span class="description">Get Validation</span><pre>getValidation()</pre></a></li>
+<li class="method public "><a href="#method_getValue" title="getValue :: Get Value"><span class="description">Get Value</span><pre>getValue()</pre></a></li>
+<li class="method public "><a href="#method_setData" title="setData :: Set Data"><span class="description">Set Data</span><pre>setData()</pre></a></li>
+<li class="method public "><a href="#method_setDescription" title="setDescription :: Set Description"><span class="description">Set Description</span><pre>setDescription()</pre></a></li>
+<li class="method public "><a href="#method_setLabel" title="setLabel :: Set Label"><span class="description">Set Label</span><pre>setLabel()</pre></a></li>
+<li class="method public "><a href="#method_setPlaceholder" title="setPlaceholder :: Set Placeholder"><span class="description">Set Placeholder</span><pre>setPlaceholder()</pre></a></li>
+<li class="method public "><a href="#method_setRequired" title="setRequired :: Set Required"><span class="description">Set Required</span><pre>setRequired()</pre></a></li>
+<li class="method public "><a href="#method_setValidation" title="setValidation :: Set Validation"><span class="description">Set Validation</span><pre>setValidation()</pre></a></li>
+<li class="method public "><a href="#method_setValue" title="setValue :: Set Value"><span class="description">Set Value</span><pre>setValue()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_data" title="$data :: Data"><span class="description"></span><pre>$data</pre></a></li>
+<li class="property private "><a href="#property_description" title="$description :: Description"><span class="description"></span><pre>$description</pre></a></li>
+<li class="property private "><a href="#property_id" title="$id :: ID"><span class="description"></span><pre>$id</pre></a></li>
+<li class="property private "><a href="#property_label" title="$label :: Label"><span class="description"></span><pre>$label</pre></a></li>
+<li class="property private "><a href="#property_name" title="$name :: Name"><span class="description"></span><pre>$name</pre></a></li>
+<li class="property private "><a href="#property_options" title="$options :: Options"><span class="description"></span><pre>$options</pre></a></li>
+<li class="property private "><a href="#property_placeholder" title="$placeholder :: Placeholder"><span class="description"></span><pre>$placeholder</pre></a></li>
+<li class="property private "><a href="#property_required" title="$required :: Required"><span class="description"></span><pre>$required</pre></a></li>
+<li class="property private "><a href="#property_type" title="$type :: Type"><span class="description"></span><pre>$type</pre></a></li>
+<li class="property private "><a href="#property_valid_types" title="$valid_types :: Valid Types"><span class="description"></span><pre>$valid_types</pre></a></li>
+<li class="property private "><a href="#property_validation" title="$validation :: Validation"><span class="description"></span><pre>$validation</pre></a></li>
+<li class="property private "><a href="#property_value" title="$value :: Value"><span class="description"></span><pre>$value</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\FormBuilder\FormField"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/FormBuilder.html">FormBuilder</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/FormBuilder.FormField.html">FormField</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Form Field</p>
+<div class="details">
+<div class="long_description"><p>A FormField is a component for a Fieldset instance.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>link</th>
+<td><a href="https://github.com/tkambler/FormBuilder">FormBuilder on GitHub</a></td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/FormBuilder.html">FormBuilder</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(string $type, string $name, string $id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>Type attribute of the form field.</p></div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Name attribute of the form field.</p></div>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>ID of teh form field.</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.exception.php">\Exception</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_createOption"></a><div class="element clickable method public method_createOption" data-toggle="collapse" data-target=".method_createOption .collapse">
+<h2>Create Option</h2>
+<pre>createOption(string $label, string $value) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$label</h4>
+<code>string</code><p>Label of the form field option.</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code><p>Value of the form field option.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>Instance of FieldOption.</div>
+</div></div>
+</div>
+<a id="method_getData"></a><div class="element clickable method public method_getData" data-toggle="collapse" data-target=".method_getData .collapse">
+<h2>Get Data</h2>
+<pre>getData() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Data of the form field.</div>
+</div></div>
+</div>
+<a id="method_getDescription"></a><div class="element clickable method public method_getDescription" data-toggle="collapse" data-target=".method_getDescription .collapse">
+<h2>Get Description</h2>
+<pre>getDescription() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Description of the form field.</div>
+</div></div>
+</div>
+<a id="method_getID"></a><div class="element clickable method public method_getID" data-toggle="collapse" data-target=".method_getID .collapse">
+<h2>Get ID</h2>
+<pre>getID() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>ID of the form field.</div>
+</div></div>
+</div>
+<a id="method_getLabel"></a><div class="element clickable method public method_getLabel" data-toggle="collapse" data-target=".method_getLabel .collapse">
+<h2>Get Label</h2>
+<pre>getLabel() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Label of the form field.</div>
+</div></div>
+</div>
+<a id="method_getName"></a><div class="element clickable method public method_getName" data-toggle="collapse" data-target=".method_getName .collapse">
+<h2>Get Name</h2>
+<pre>getName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Name attribute of the form field.</div>
+</div></div>
+</div>
+<a id="method_getOptions"></a><div class="element clickable method public method_getOptions" data-toggle="collapse" data-target=".method_getOptions .collapse">
+<h2>Get Options</h2>
+<pre>getOptions() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Ordered array of FieldOption instances.</div>
+</div></div>
+</div>
+<a id="method_getPlaceholder"></a><div class="element clickable method public method_getPlaceholder" data-toggle="collapse" data-target=".method_getPlaceholder .collapse">
+<h2>Get Placeholder</h2>
+<pre>getPlaceholder() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Placeholder of the form field.</div>
+</div></div>
+</div>
+<a id="method_getRequired"></a><div class="element clickable method public method_getRequired" data-toggle="collapse" data-target=".method_getRequired .collapse">
+<h2>Get Required</h2>
+<pre>getRequired() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>Whether field is required.</div>
+</div></div>
+</div>
+<a id="method_getType"></a><div class="element clickable method public method_getType" data-toggle="collapse" data-target=".method_getType .collapse">
+<h2>Get Type</h2>
+<pre>getType() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Type attribute of the form field.</div>
+</div></div>
+</div>
+<a id="method_getValidation"></a><div class="element clickable method public method_getValidation" data-toggle="collapse" data-target=".method_getValidation .collapse">
+<h2>Get Validation</h2>
+<pre>getValidation() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Validation rule of the form field.</div>
+</div></div>
+</div>
+<a id="method_getValue"></a><div class="element clickable method public method_getValue" data-toggle="collapse" data-target=".method_getValue .collapse">
+<h2>Get Value</h2>
+<pre>getValue() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Value of the form field.</div>
+</div></div>
+</div>
+<a id="method_setData"></a><div class="element clickable method public method_setData" data-toggle="collapse" data-target=".method_setData .collapse">
+<h2>Set Data</h2>
+<pre>setData(array $data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Data of the form field.</p></div>
+</div></div>
+</div>
+<a id="method_setDescription"></a><div class="element clickable method public method_setDescription" data-toggle="collapse" data-target=".method_setDescription .collapse">
+<h2>Set Description</h2>
+<pre>setDescription(string $desc) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$desc</h4>
+<code>string</code><p>Description of the form field.</p></div>
+</div></div>
+</div>
+<a id="method_setLabel"></a><div class="element clickable method public method_setLabel" data-toggle="collapse" data-target=".method_setLabel .collapse">
+<h2>Set Label</h2>
+<pre>setLabel(string $label) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$label</h4>
+<code>string</code><p>Label of the form field.</p></div>
+</div></div>
+</div>
+<a id="method_setPlaceholder"></a><div class="element clickable method public method_setPlaceholder" data-toggle="collapse" data-target=".method_setPlaceholder .collapse">
+<h2>Set Placeholder</h2>
+<pre>setPlaceholder(string $placeholder) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$placeholder</h4>
+<code>string</code><p>Placeholder of the form field.</p></div>
+</div></div>
+</div>
+<a id="method_setRequired"></a><div class="element clickable method public method_setRequired" data-toggle="collapse" data-target=".method_setRequired .collapse">
+<h2>Set Required</h2>
+<pre>setRequired(boolean $req) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$req</h4>
+<code>boolean</code><p>Whether field is required.</p></div>
+</div></div>
+</div>
+<a id="method_setValidation"></a><div class="element clickable method public method_setValidation" data-toggle="collapse" data-target=".method_setValidation .collapse">
+<h2>Set Validation</h2>
+<pre>setValidation(string $validation) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$validation</h4>
+<code>string</code><p>Validation rule of the form field.</p></div>
+</div></div>
+</div>
+<a id="method_setValue"></a><div class="element clickable method public method_setValue" data-toggle="collapse" data-target=".method_setValue .collapse">
+<h2>Set Value</h2>
+<pre>setValue(string $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code><p>Value of the form field.</p></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_data"> </a><div class="element clickable property private property_data" data-toggle="collapse" data-target=".property_data .collapse">
+<h2></h2>
+<pre>$data : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_description"> </a><div class="element clickable property private property_description" data-toggle="collapse" data-target=".property_description .collapse">
+<h2></h2>
+<pre>$description : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_id"> </a><div class="element clickable property private property_id" data-toggle="collapse" data-target=".property_id .collapse">
+<h2></h2>
+<pre>$id : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_label"> </a><div class="element clickable property private property_label" data-toggle="collapse" data-target=".property_label .collapse">
+<h2></h2>
+<pre>$label : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_name"> </a><div class="element clickable property private property_name" data-toggle="collapse" data-target=".property_name .collapse">
+<h2></h2>
+<pre>$name : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_options"> </a><div class="element clickable property private property_options" data-toggle="collapse" data-target=".property_options .collapse">
+<h2></h2>
+<pre>$options : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_placeholder"> </a><div class="element clickable property private property_placeholder" data-toggle="collapse" data-target=".property_placeholder .collapse">
+<h2></h2>
+<pre>$placeholder : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_required"> </a><div class="element clickable property private property_required" data-toggle="collapse" data-target=".property_required .collapse">
+<h2></h2>
+<pre>$required : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_type"> </a><div class="element clickable property private property_type" data-toggle="collapse" data-target=".property_type .collapse">
+<h2></h2>
+<pre>$type : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_valid_types"> </a><div class="element clickable property private property_valid_types" data-toggle="collapse" data-target=".property_valid_types .collapse">
+<h2></h2>
+<pre>$valid_types : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_validation"> </a><div class="element clickable property private property_validation" data-toggle="collapse" data-target=".property_validation .collapse">
+<h2></h2>
+<pre>$validation : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_value"> </a><div class="element clickable property private property_value" data-toggle="collapse" data-target=".property_value .collapse">
+<h2></h2>
+<pre>$value : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a11</a> and<br>
+            generated on 2013-06-03T22:37:37-05:00.<br></footer></div>
+</div>
+</body>
+</html>

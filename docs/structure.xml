@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a11" title="FormBuilder">
+  <file path="FieldOption.php" hash="aca662f460335629ae1534e70f6d5214" package="Default">
+    <docblock line="2">
+      <description>FormBuilder</description>
+      <long-description>&lt;p&gt;A family of PHP classes that enable you to easily define the various
+elements that make up a complex HTML form, which can then be
+exported to JSON for client-side rendering.&lt;/p&gt;</long-description>
+    </docblock>
+    <namespace-alias name="Exception">Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="FormBuilder" line="22" package="FormBuilder">
+      <extends/>
+      <name>FieldOption</name>
+      <full_name>\FormBuilder\FieldOption</full_name>
+      <docblock line="14">
+        <description>Field Option</description>
+        <long-description>&lt;p&gt;A FieldOption is a component for a FormField instance, typically a &lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt;.&lt;/p&gt;</long-description>
+        <tag line="14" name="link" description="FormBuilder on GitHub" link="https://github.com/tkambler/FormBuilder"/>
+        <tag line="14" name="package" description="FormBuilder"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="29" namespace="FormBuilder" package="Default">
+        <name>$label</name>
+        <default></default>
+        <docblock line="24">
+          <description>Label</description>
+          <long-description></long-description>
+          <tag line="24" name="var" description="Label of the field option." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="36" namespace="FormBuilder" package="Default">
+        <name>$value</name>
+        <default></default>
+        <docblock line="31">
+          <description>Value</description>
+          <long-description></long-description>
+          <tag line="31" name="var" description="Value of the field option." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="44" package="FormBuilder">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="38">
+          <description>Constructor</description>
+          <long-description></long-description>
+          <tag line="38" name="param" description="Label of the field option." type="string" variable="$label">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="38" name="param" description="Value of the field option." type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="44">
+          <name>$label</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="44">
+          <name>$value</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="54" package="FormBuilder">
+        <name>setLabel</name>
+        <full_name>setLabel</full_name>
+        <docblock line="49">
+          <description>Set Label</description>
+          <long-description></long-description>
+          <tag line="49" name="param" description="Label of the field option." type="string" variable="$label">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="54">
+          <name>$label</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="63" package="FormBuilder">
+        <name>getLabel</name>
+        <full_name>getLabel</full_name>
+        <docblock line="58">
+          <description>Get Label</description>
+          <long-description></long-description>
+          <tag line="58" name="return" description="Label of the field option." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="72" package="FormBuilder">
+        <name>setValue</name>
+        <full_name>setValue</full_name>
+        <docblock line="67">
+          <description>Set Value</description>
+          <long-description></long-description>
+          <tag line="67" name="param" description="Value of the field option." type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="72">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="81" package="FormBuilder">
+        <name>getValue</name>
+        <full_name>getValue</full_name>
+        <docblock line="76">
+          <description>Get Value</description>
+          <long-description></long-description>
+          <tag line="76" name="return" description="Value of the field option." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="Fieldset.php" hash="2eb815423af6befab2dff75ea83b9a60" package="Default">
+    <docblock line="2">
+      <description>FormBuilder</description>
+      <long-description>&lt;p&gt;A family of PHP classes that enable you to easily define the various
+elements that make up a complex HTML form, which can then be
+exported to JSON for client-side rendering.&lt;/p&gt;</long-description>
+    </docblock>
+    <namespace-alias name="Exception">Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="FormBuilder" line="22" package="FormBuilder">
+      <extends/>
+      <name>Fieldset</name>
+      <full_name>\FormBuilder\Fieldset</full_name>
+      <docblock line="14">
+        <description>Fieldset</description>
+        <long-description>&lt;p&gt;A Fieldset is a group of FormField instances.&lt;/p&gt;</long-description>
+        <tag line="14" name="link" description="FormBuilder on GitHub" link="https://github.com/tkambler/FormBuilder"/>
+        <tag line="14" name="package" description="FormBuilder"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="29" namespace="FormBuilder" package="Default">
+        <name>$groups</name>
+        <default>array()</default>
+        <docblock line="24">
+          <description>Groups</description>
+          <long-description></long-description>
+          <tag line="24" name="var" description="Ordered array of FieldsetGroup instances." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="36" namespace="FormBuilder" package="Default">
+        <name>$label</name>
+        <default></default>
+        <docblock line="31">
+          <description>Label</description>
+          <long-description></long-description>
+          <tag line="31" name="var" description="Label for the fieldset." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="43" namespace="FormBuilder" package="Default">
+        <name>$description</name>
+        <default></default>
+        <docblock line="38">
+          <description>Description</description>
+          <long-description></long-description>
+          <tag line="38" name="var" description="Description for the fieldset." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="50" package="FormBuilder">
+        <name>setLabel</name>
+        <full_name>setLabel</full_name>
+        <docblock line="45">
+          <description>Set Label</description>
+          <long-description></long-description>
+          <tag line="45" name="param" description="Label for the fieldset." type="string" variable="$label">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="50">
+          <name>$label</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="59" package="FormBuilder">
+        <name>getLabel</name>
+        <full_name>getLabel</full_name>
+        <docblock line="54">
+          <description>Get Label</description>
+          <long-description></long-description>
+          <tag line="54" name="return" description="Label for the fieldset." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="68" package="FormBuilder">
+        <name>setDescription</name>
+        <full_name>setDescription</full_name>
+        <docblock line="63">
+          <description>Set Description</description>
+          <long-description></long-description>
+          <tag line="63" name="param" description="Description for the fieldset." type="string" variable="$desc">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="68">
+          <name>$desc</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="77" package="FormBuilder">
+        <name>getDescription</name>
+        <full_name>getDescription</full_name>
+        <docblock line="72">
+          <description>Get Description</description>
+          <long-description></long-description>
+          <tag line="72" name="return" description="Description for the fieldset." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="86" package="FormBuilder">
+        <name>createGroup</name>
+        <full_name>createGroup</full_name>
+        <docblock line="81">
+          <description>Create Group</description>
+          <long-description></long-description>
+          <tag line="81" name="return" description="FieldsetGroup instance." type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="97" package="FormBuilder">
+        <name>getGroups</name>
+        <full_name>getGroups</full_name>
+        <docblock line="92">
+          <description>Get Groups</description>
+          <long-description></long-description>
+          <tag line="92" name="return" description="Ordered array of FielsetGroup instances." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="FieldsetGroup.php" hash="19c1f6d2feae09f07dbd8305794ae7e6" package="Default">
+    <docblock line="2">
+      <description>FormBuilder</description>
+      <long-description>&lt;p&gt;A family of PHP classes that enable you to easily define the various
+elements that make up a complex HTML form, which can then be
+exported to JSON for client-side rendering.&lt;/p&gt;</long-description>
+    </docblock>
+    <namespace-alias name="Exception">Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="FormBuilder" line="22" package="FormBuilder">
+      <extends/>
+      <name>FieldsetGroup</name>
+      <full_name>\FormBuilder\FieldsetGroup</full_name>
+      <docblock line="14">
+        <description>Fieldset Group</description>
+        <long-description>&lt;p&gt;A FieldsetGroup is a component for a FormBuilder instance.&lt;/p&gt;</long-description>
+        <tag line="14" name="link" description="FormBuilder on GitHub" link="https://github.com/tkambler/FormBuilder"/>
+        <tag line="14" name="package" description="FormBuilder"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="29" namespace="FormBuilder" package="Default">
+        <name>$cols</name>
+        <default>1</default>
+        <docblock line="24">
+          <description>Columns</description>
+          <long-description></long-description>
+          <tag line="24" name="var" description="Count of columns." type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="36" namespace="FormBuilder" package="Default">
+        <name>$fields</name>
+        <default>array()</default>
+        <docblock line="31">
+          <description>Fields</description>
+          <long-description></long-description>
+          <tag line="31" name="var" description="Ordered array of FormField instances." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="43" package="FormBuilder">
+        <name>setColumns</name>
+        <full_name>setColumns</full_name>
+        <docblock line="38">
+          <description>Set Columns</description>
+          <long-description></long-description>
+          <tag line="38" name="param" description="Count of columns." type="int" variable="$cols">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="43">
+          <name>$cols</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="56" package="FormBuilder">
+        <name>getColumns</name>
+        <full_name>getColumns</full_name>
+        <docblock line="51">
+          <description>Get Columns</description>
+          <long-description></long-description>
+          <tag line="51" name="return" description="Count of columns." type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="65" package="FormBuilder">
+        <name>getFields</name>
+        <full_name>getFields</full_name>
+        <docblock line="60">
+          <description>Get Fields</description>
+          <long-description></long-description>
+          <tag line="60" name="return" description="Ordered array of FormField instances." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="75" package="FormBuilder">
+        <name>createText</name>
+        <full_name>createText</full_name>
+        <docblock line="69">
+          <description>Create Text Field</description>
+          <long-description></long-description>
+          <tag line="69" name="param" description="Name attribute of the form field." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="69" name="param" description="ID of the form field." type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="75">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="75">
+          <name>$id</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="85" package="FormBuilder">
+        <name>createSelect</name>
+        <full_name>createSelect</full_name>
+        <docblock line="79">
+          <description>Create Select Field</description>
+          <long-description></long-description>
+          <tag line="79" name="param" description="Name attribute of the form field." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="79" name="param" description="ID of the form field." type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="85">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="85">
+          <name>$id</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="95" package="FormBuilder">
+        <name>createRadio</name>
+        <full_name>createRadio</full_name>
+        <docblock line="89">
+          <description>Create Radio Field</description>
+          <long-description></long-description>
+          <tag line="89" name="param" description="Name attribute of the form field." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="89" name="param" description="ID of the form field." type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="95">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="95">
+          <name>$id</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="105" package="FormBuilder">
+        <name>createCheckbox</name>
+        <full_name>createCheckbox</full_name>
+        <docblock line="99">
+          <description>Create Checkbox</description>
+          <long-description></long-description>
+          <tag line="99" name="param" description="Name attribute of the form field." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="99" name="param" description="ID of the form field." type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="105">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="105">
+          <name>$id</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="115" package="FormBuilder">
+        <name>createTextarea</name>
+        <full_name>createTextarea</full_name>
+        <docblock line="109">
+          <description>Create Textarea Field</description>
+          <long-description></long-description>
+          <tag line="109" name="param" description="Name attribute of the form field." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="109" name="param" description="ID of the form field." type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="115">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="115">
+          <name>$id</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="126" package="FormBuilder">
+        <name>createField</name>
+        <full_name>createField</full_name>
+        <docblock line="119">
+          <description>Create Field</description>
+          <long-description></long-description>
+          <tag line="119" name="param" description="Type attribute of the form field." type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="119" name="param" description="Name attribute of the form field." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="119" name="param" description="ID of the form field." type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="126">
+          <name>$type</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="126">
+          <name>$name</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="126">
+          <name>$id</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="FormBuilder.php" hash="5ea734e99a17a214d5d2b76e875ee7e7" package="Default">
+    <docblock line="2">
+      <description>FormBuilder</description>
+      <long-description>&lt;p&gt;A family of PHP classes that enable you to easily define the various
+elements that make up a complex HTML form, which can then be
+exported to JSON for client-side rendering.&lt;/p&gt;</long-description>
+    </docblock>
+    <namespace-alias name="Exception">Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="FormBuilder" line="22" package="FormBuilder">
+      <extends/>
+      <name>FormBuilder</name>
+      <full_name>\FormBuilder\FormBuilder</full_name>
+      <docblock line="14">
+        <description>FormBuilder</description>
+        <long-description>&lt;p&gt;FormBuilder is the parent class of the FormBuilder package.&lt;/p&gt;</long-description>
+        <tag line="14" name="link" description="FormBuilder on GitHub" link="https://github.com/tkambler/FormBuilder"/>
+        <tag line="14" name="package" description="FormBuilder"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="29" namespace="FormBuilder" package="Default">
+        <name>$id</name>
+        <default></default>
+        <docblock line="24">
+          <description>ID</description>
+          <long-description></long-description>
+          <tag line="24" name="var" description="ID of the form." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="36" namespace="FormBuilder" package="Default">
+        <name>$name</name>
+        <default></default>
+        <docblock line="31">
+          <description>Name</description>
+          <long-description></long-description>
+          <tag line="31" name="var" description="Name of the form." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="43" namespace="FormBuilder" package="Default">
+        <name>$label</name>
+        <default></default>
+        <docblock line="38">
+          <description>Label</description>
+          <long-description></long-description>
+          <tag line="38" name="var" description="Label of the form." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="50" namespace="FormBuilder" package="Default">
+        <name>$fieldsets</name>
+        <default>array()</default>
+        <docblock line="45">
+          <description>Fieldsets</description>
+          <long-description></long-description>
+          <tag line="45" name="var" description="Ordered array of Fieldset instances." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="57" namespace="FormBuilder" package="Default">
+        <name>$buttons</name>
+        <default>array()</default>
+        <docblock line="52">
+          <description>Buttons</description>
+          <long-description></long-description>
+          <tag line="52" name="var" description="Ordered array of FormButton instances." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="66" package="FormBuilder">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="59">
+          <description>Constructor</description>
+          <long-description></long-description>
+          <tag line="59" name="param" description="ID of the form." type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="59" name="param" description="Name of the form." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="59" name="throws" description="" type="\Exception">
+            <type by_reference="false">\Exception</type>
+          </tag>
+        </docblock>
+        <argument line="66">
+          <name>$id</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="66">
+          <name>$name</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="82" package="FormBuilder">
+        <name>createFieldset</name>
+        <full_name>createFieldset</full_name>
+        <docblock line="77">
+          <description>Create Fieldset</description>
+          <long-description></long-description>
+          <tag line="77" name="return" description="Fieldset instance." type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="93" package="FormBuilder">
+        <name>export</name>
+        <full_name>export</full_name>
+        <docblock line="88">
+          <description>Export</description>
+          <long-description></long-description>
+          <tag line="88" name="return" description="Associative array of the form." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="160" package="FormBuilder">
+        <name>setLabel</name>
+        <full_name>setLabel</full_name>
+        <docblock line="155">
+          <description>Set Label</description>
+          <long-description></long-description>
+          <tag line="155" name="param" description="Label of the form." type="string" variable="$label">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="160">
+          <name>$label</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="169" package="FormBuilder">
+        <name>getLabel</name>
+        <full_name>getLabel</full_name>
+        <docblock line="164">
+          <description>Get Label</description>
+          <long-description></long-description>
+          <tag line="164" name="return" description="Label of the form." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="179" package="FormBuilder">
+        <name>createButton</name>
+        <full_name>createButton</full_name>
+        <docblock line="173">
+          <description>Create Button</description>
+          <long-description></long-description>
+          <tag line="173" name="param" description="Label of the button." type="string" variable="$label">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="173" name="param" description="ID of the button." type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="179">
+          <name>$label</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="179">
+          <name>$id</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="FormButton.php" hash="5fdfb0574b710764e9b9d0767bd693c1" package="Default">
+    <docblock line="2">
+      <description>FormBuilder</description>
+      <long-description>&lt;p&gt;A family of PHP classes that enable you to easily define the various
+elements that make up a complex HTML form, which can then be
+exported to JSON for client-side rendering.&lt;/p&gt;</long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="FormBuilder" line="20" package="FormBuilder">
+      <extends/>
+      <name>FormButton</name>
+      <full_name>\FormBuilder\FormButton</full_name>
+      <docblock line="12">
+        <description>Form Button</description>
+        <long-description>&lt;p&gt;A FormButton is a component for a FormBuilder instance.&lt;/p&gt;</long-description>
+        <tag line="12" name="link" description="FormBuilder on GitHub" link="https://github.com/tkambler/FormBuilder"/>
+        <tag line="12" name="package" description="FormBuilder"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="27" namespace="FormBuilder" package="Default">
+        <name>$label</name>
+        <default></default>
+        <docblock line="22">
+          <description>Label</description>
+          <long-description></long-description>
+          <tag line="22" name="var" description="Label of the button." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="34" namespace="FormBuilder" package="Default">
+        <name>$id</name>
+        <default></default>
+        <docblock line="29">
+          <description>ID</description>
+          <long-description></long-description>
+          <tag line="29" name="var" description="ID of the button." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="41" namespace="FormBuilder" package="Default">
+        <name>$type</name>
+        <default></default>
+        <docblock line="36">
+          <description>Type</description>
+          <long-description></long-description>
+          <tag line="36" name="var" description="Type attribute of the button." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="49" package="FormBuilder">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="43">
+          <description>Constructor</description>
+          <long-description></long-description>
+          <tag line="43" name="param" description="Label of the button." type="string" variable="$label">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="43" name="param" description="ID of the button." type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="49">
+          <name>$label</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="49">
+          <name>$id</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="59" package="FormBuilder">
+        <name>getLabel</name>
+        <full_name>getLabel</full_name>
+        <docblock line="54">
+          <description>Get Label</description>
+          <long-description></long-description>
+          <tag line="54" name="return" description="Label of the button." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="68" package="FormBuilder">
+        <name>getID</name>
+        <full_name>getID</full_name>
+        <docblock line="63">
+          <description>Get ID</description>
+          <long-description></long-description>
+          <tag line="63" name="return" description="ID of the button." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="77" package="FormBuilder">
+        <name>setType</name>
+        <full_name>setType</full_name>
+        <docblock line="72">
+          <description>Set Type</description>
+          <long-description></long-description>
+          <tag line="72" name="param" description="Type attribute of the button." type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="77">
+          <name>$type</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="86" package="FormBuilder">
+        <name>getType</name>
+        <full_name>getType</full_name>
+        <docblock line="81">
+          <description>Get Type</description>
+          <long-description></long-description>
+          <tag line="81" name="return" description="Type attribute of the button." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="FormField.php" hash="f240149040c1229df2c4f324cf460d49" package="Default">
+    <docblock line="2">
+      <description>FormBuilder</description>
+      <long-description>&lt;p&gt;A family of PHP classes that enable you to easily define the various
+elements that make up a complex HTML form, which can then be
+exported to JSON for client-side rendering.&lt;/p&gt;</long-description>
+    </docblock>
+    <namespace-alias name="Exception">Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="FormBuilder" line="22" package="FormBuilder">
+      <extends/>
+      <name>FormField</name>
+      <full_name>\FormBuilder\FormField</full_name>
+      <docblock line="14">
+        <description>Form Field</description>
+        <long-description>&lt;p&gt;A FormField is a component for a Fieldset instance.&lt;/p&gt;</long-description>
+        <tag line="14" name="link" description="FormBuilder on GitHub" link="https://github.com/tkambler/FormBuilder"/>
+        <tag line="14" name="package" description="FormBuilder"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="29" namespace="FormBuilder" package="Default">
+        <name>$valid_types</name>
+        <default>array('text', 'select', 'textarea', 'radio', 'checkbox', 'file')</default>
+        <docblock line="24">
+          <description>Valid Types</description>
+          <long-description></long-description>
+          <tag line="24" name="var" description="List of valid types." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="36" namespace="FormBuilder" package="Default">
+        <name>$type</name>
+        <default></default>
+        <docblock line="31">
+          <description>Type</description>
+          <long-description></long-description>
+          <tag line="31" name="var" description="Type of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="43" namespace="FormBuilder" package="Default">
+        <name>$id</name>
+        <default></default>
+        <docblock line="38">
+          <description>ID</description>
+          <long-description></long-description>
+          <tag line="38" name="var" description="ID of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="50" namespace="FormBuilder" package="Default">
+        <name>$name</name>
+        <default></default>
+        <docblock line="45">
+          <description>Name</description>
+          <long-description></long-description>
+          <tag line="45" name="var" description="Name attribute of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="57" namespace="FormBuilder" package="Default">
+        <name>$label</name>
+        <default></default>
+        <docblock line="52">
+          <description>Label</description>
+          <long-description></long-description>
+          <tag line="52" name="var" description="Label of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="64" namespace="FormBuilder" package="Default">
+        <name>$value</name>
+        <default></default>
+        <docblock line="59">
+          <description>Value</description>
+          <long-description></long-description>
+          <tag line="59" name="var" description="Value of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="71" namespace="FormBuilder" package="Default">
+        <name>$description</name>
+        <default></default>
+        <docblock line="66">
+          <description>Description</description>
+          <long-description></long-description>
+          <tag line="66" name="var" description="Description of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="78" namespace="FormBuilder" package="Default">
+        <name>$placeholder</name>
+        <default></default>
+        <docblock line="73">
+          <description>Placeholder</description>
+          <long-description></long-description>
+          <tag line="73" name="var" description="Placeholder of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="85" namespace="FormBuilder" package="Default">
+        <name>$required</name>
+        <default>false</default>
+        <docblock line="80">
+          <description>Required</description>
+          <long-description></long-description>
+          <tag line="80" name="var" description="Whether form field is required." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="92" namespace="FormBuilder" package="Default">
+        <name>$validation</name>
+        <default></default>
+        <docblock line="87">
+          <description>Validation</description>
+          <long-description></long-description>
+          <tag line="87" name="var" description="Validation rule of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="99" namespace="FormBuilder" package="Default">
+        <name>$data</name>
+        <default>array()</default>
+        <docblock line="94">
+          <description>Data</description>
+          <long-description></long-description>
+          <tag line="94" name="var" description="Associative array of data of the form field." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="106" namespace="FormBuilder" package="Default">
+        <name>$options</name>
+        <default>array()</default>
+        <docblock line="101">
+          <description>Options</description>
+          <long-description></long-description>
+          <tag line="101" name="var" description="Ordered array of options of the form field, typically for `&lt;select&gt;`." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="116" package="FormBuilder">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="108">
+          <description>Constructor</description>
+          <long-description></long-description>
+          <tag line="108" name="param" description="Type attribute of the form field." type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="108" name="param" description="Name attribute of the form field." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="108" name="param" description="ID of teh form field." type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="108" name="throws" description="" type="\Exception">
+            <type by_reference="false">\Exception</type>
+          </tag>
+        </docblock>
+        <argument line="116">
+          <name>$type</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="116">
+          <name>$name</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="116">
+          <name>$id</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="139" package="FormBuilder">
+        <name>getName</name>
+        <full_name>getName</full_name>
+        <docblock line="134">
+          <description>Get Name</description>
+          <long-description></long-description>
+          <tag line="134" name="return" description="Name attribute of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="148" package="FormBuilder">
+        <name>getID</name>
+        <full_name>getID</full_name>
+        <docblock line="143">
+          <description>Get ID</description>
+          <long-description></long-description>
+          <tag line="143" name="return" description="ID of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="157" package="FormBuilder">
+        <name>setLabel</name>
+        <full_name>setLabel</full_name>
+        <docblock line="152">
+          <description>Set Label</description>
+          <long-description></long-description>
+          <tag line="152" name="param" description="Label of the form field." type="string" variable="$label">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="157">
+          <name>$label</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="166" package="FormBuilder">
+        <name>getLabel</name>
+        <full_name>getLabel</full_name>
+        <docblock line="161">
+          <description>Get Label</description>
+          <long-description></long-description>
+          <tag line="161" name="return" description="Label of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="175" package="FormBuilder">
+        <name>setDescription</name>
+        <full_name>setDescription</full_name>
+        <docblock line="170">
+          <description>Set Description</description>
+          <long-description></long-description>
+          <tag line="170" name="param" description="Description of the form field." type="string" variable="$desc">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="175">
+          <name>$desc</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="184" package="FormBuilder">
+        <name>getDescription</name>
+        <full_name>getDescription</full_name>
+        <docblock line="179">
+          <description>Get Description</description>
+          <long-description></long-description>
+          <tag line="179" name="return" description="Description of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="193" package="FormBuilder">
+        <name>setPlaceholder</name>
+        <full_name>setPlaceholder</full_name>
+        <docblock line="188">
+          <description>Set Placeholder</description>
+          <long-description></long-description>
+          <tag line="188" name="param" description="Placeholder of the form field." type="string" variable="$placeholder">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="193">
+          <name>$placeholder</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="202" package="FormBuilder">
+        <name>getPlaceholder</name>
+        <full_name>getPlaceholder</full_name>
+        <docblock line="197">
+          <description>Get Placeholder</description>
+          <long-description></long-description>
+          <tag line="197" name="return" description="Placeholder of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="211" package="FormBuilder">
+        <name>setValue</name>
+        <full_name>setValue</full_name>
+        <docblock line="206">
+          <description>Set Value</description>
+          <long-description></long-description>
+          <tag line="206" name="param" description="Value of the form field." type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="211">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="220" package="FormBuilder">
+        <name>getValue</name>
+        <full_name>getValue</full_name>
+        <docblock line="215">
+          <description>Get Value</description>
+          <long-description></long-description>
+          <tag line="215" name="return" description="Value of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="229" package="FormBuilder">
+        <name>getType</name>
+        <full_name>getType</full_name>
+        <docblock line="224">
+          <description>Get Type</description>
+          <long-description></long-description>
+          <tag line="224" name="return" description="Type attribute of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="240" package="FormBuilder">
+        <name>createOption</name>
+        <full_name>createOption</full_name>
+        <docblock line="233">
+          <description>Create Option</description>
+          <long-description></long-description>
+          <tag line="233" name="param" description="Label of the form field option." type="string" variable="$label">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="233" name="param" description="Value of the form field option." type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="233" name="return" description="Instance of FieldOption." type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+        <argument line="240">
+          <name>$label</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="240">
+          <name>$value</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="251" package="FormBuilder">
+        <name>getOptions</name>
+        <full_name>getOptions</full_name>
+        <docblock line="246">
+          <description>Get Options</description>
+          <long-description></long-description>
+          <tag line="246" name="return" description="Ordered array of FieldOption instances." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="260" package="FormBuilder">
+        <name>setRequired</name>
+        <full_name>setRequired</full_name>
+        <docblock line="255">
+          <description>Set Required</description>
+          <long-description></long-description>
+          <tag line="255" name="param" description="Whether field is required." type="boolean" variable="$req">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="260">
+          <name>$req</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="269" package="FormBuilder">
+        <name>getRequired</name>
+        <full_name>getRequired</full_name>
+        <docblock line="264">
+          <description>Get Required</description>
+          <long-description></long-description>
+          <tag line="264" name="return" description="Whether field is required." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="278" package="FormBuilder">
+        <name>setValidation</name>
+        <full_name>setValidation</full_name>
+        <docblock line="273">
+          <description>Set Validation</description>
+          <long-description></long-description>
+          <tag line="273" name="param" description="Validation rule of the form field." type="string" variable="$validation">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="278">
+          <name>$validation</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="287" package="FormBuilder">
+        <name>getValidation</name>
+        <full_name>getValidation</full_name>
+        <docblock line="282">
+          <description>Get Validation</description>
+          <long-description></long-description>
+          <tag line="282" name="return" description="Validation rule of the form field." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="296" package="FormBuilder">
+        <name>setData</name>
+        <full_name>setData</full_name>
+        <docblock line="291">
+          <description>Set Data</description>
+          <long-description></long-description>
+          <tag line="291" name="param" description="Data of the form field." type="array" variable="$data">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="296">
+          <name>$data</name>
+          <default>null</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="FormBuilder" line="305" package="FormBuilder">
+        <name>getData</name>
+        <full_name>getData</full_name>
+        <docblock line="300">
+          <description>Get Data</description>
+          <long-description></long-description>
+          <tag line="300" name="return" description="Data of the form field." type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="FormBuilder" full_name="FormBuilder"/>
+  <namespace name="FormBuilder" full_name="FormBuilder"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>
